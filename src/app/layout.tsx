@@ -1,5 +1,10 @@
-import Head from "next/head";
+import type { Metadata } from "next";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "심은주 포트폴리오",
+  description: "심은주의 포트폴리오 사이트입니다.",
+};
 
 export default function RootLayout({
   children,
@@ -7,18 +12,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <Head>
+    <html lang="ko">
+      <head>
         <link
           rel="stylesheet"
           as="style"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         />
-      </Head>
-      <html lang="ko">
-        <body>{children}</body>
-      </html>
-    </>
+      </head>
+      <body>{children}</body>
+    </html>
   );
 }
