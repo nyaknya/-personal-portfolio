@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "심은주 포트폴리오",
   description: "심은주의 포트폴리오 사이트입니다.",
+  icons:{
+    icon: "/images/favicon.png"
+  }
 };
 
 export default function RootLayout({

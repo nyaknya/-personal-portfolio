@@ -1,3 +1,13 @@
+import Header from "./_components/Header";
+import style from "./page.module.css";
+
 export default function Home() {
-  return <div>타다~</div>;
+  return (
+    <>
+      <Header />
+      <main>
+        <div className={style.test}></div>
+      </main>
+    </>
+  );
 }
