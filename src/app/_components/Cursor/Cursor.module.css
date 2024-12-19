@@ -6,4 +6,7 @@
   height: 210px;
   border-radius: 50%;
   background-color: var(--color-white);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
 }
