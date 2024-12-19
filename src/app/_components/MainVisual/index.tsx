@@ -1,5 +1,6 @@
 "use client";
 
+import { TextFade } from "../TextFade";
 import { TextPullUp } from "../TextPullUp";
 import style from "./MainVisual.module.css";
 
@@ -8,10 +9,14 @@ export default function MainVisual() {
     <section className={style["visual-box"]}>
       <div className="container">
         <h2>
-          <TextPullUp text="HELLO!" />
-          <TextPullUp text="I’m Frontend Developer" />
+          <TextPullUp>HELLO!</TextPullUp>
+          <TextPullUp>I’m Frontend Developer</TextPullUp>
         </h2>
-        <p>안녕하세요, 프론트엔드 개발자로 준비 중인 심은주입니다.</p>
+        <div className={style.description}>
+          <TextFade direction="down">
+            안녕하세요, 프론트엔드 개발자로 준비 중인 심은주입니다.
+          </TextFade>
+        </div>
       </div>
     </section>
   );

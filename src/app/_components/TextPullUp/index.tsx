@@ -1,9 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import * as React from "react";
+import { useRef } from "react";
 import style from "./TextPullUp.module.css";
 
-export function TextPullUp({ text }: { text: string }) {
+export function TextPullUp({ children }: { children: React.ReactNode }) {
+  const text = typeof children === "string" ? children : "";
   const splittedText = text.split("");
 
   const pullupVariant = {
@@ -16,7 +17,8 @@ export function TextPullUp({ text }: { text: string }) {
       },
     }),
   };
-  const ref = React.useRef(null);
+
+  const ref = useRef(null);
   return (
     <div className={style["text-wrap"]}>
       {splittedText.map((current, i) => (
@@ -28,7 +30,7 @@ export function TextPullUp({ text }: { text: string }) {
           animate="animate"
           custom={i}
         >
-          {current == " " ? <span>&nbsp;</span> : current}
+          {current === " " ? <span>&nbsp;</span> : current}
         </motion.div>
       ))}
     </div>

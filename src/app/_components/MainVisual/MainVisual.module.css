@@ -16,7 +16,7 @@
   display: block;
 }
 
-.visual-box p {
+.visual-box .description {
   color: var(--color-white);
   margin: 30px 0;
   font-size: 3.2rem;
