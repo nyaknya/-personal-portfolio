@@ -10,3 +10,9 @@
   z-index: 9999;
   mix-blend-mode: difference;
 }
+
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}

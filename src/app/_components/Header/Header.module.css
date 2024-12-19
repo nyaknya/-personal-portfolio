@@ -46,3 +46,33 @@
   background: #111;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 30px;
+  }
+
+  .header ul {
+    gap: 25px;
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 512px) {
+  .header {
+    padding: 12px 15px;
+  }
+
+  .header ul {
+    gap: 15px;
+    font-size: 1.6rem;
+  }
+
+  .contact {
+    padding: 5px 10px;
+  }
+
+  .header img {
+    width: 100%;
+  }
+}
