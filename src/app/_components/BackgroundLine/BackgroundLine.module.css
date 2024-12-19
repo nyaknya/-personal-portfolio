@@ -1,0 +1,20 @@
+.bg-box {
+  width: 1728px;
+  height: 100vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: -1;
+}
+
+.line {
+  width: 11.1%;
+  border-right: 1px solid #303030;
+  height: 100vh;
+}
+
+.line:first {
+  border-left: 1px solid #303030;
+}
