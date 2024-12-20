@@ -17,6 +17,14 @@ export default function MainVisual() {
             안녕하세요, 프론트엔드 개발자로 준비 중인 심은주입니다.
           </TextFade>
         </div>
+        <div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </div>
     </section>
   );
