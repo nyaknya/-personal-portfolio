@@ -9,8 +9,6 @@ import Link from "next/link";
 import FadeInLoop from "../FadeInLoop";
 
 export default function MainVisual() {
-  const images = ["/images/main_react.png", "/images/main_next.png"];
-
   return (
     <section className={style["visual-box"]}>
       <div className="container">
@@ -75,7 +73,7 @@ export default function MainVisual() {
         </TextFade>
       </div>
       <div className={style["fade-anibox"]}>
-        <FadeInLoop images={images} />
+        <FadeInLoop />
       </div>
     </section>
   );
