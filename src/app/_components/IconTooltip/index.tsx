@@ -1,3 +1,11 @@
-export default function IconTooltip() {
-  return <div>아이콘 툴팁</div>;
+"use client";
+
+import { ReactNode } from "react";
+
+interface IconToolTipProps {
+  children: ReactNode;
+}
+
+export default function IconTooltip({ children }: IconToolTipProps) {
+  return <div>{children}</div>;
 }

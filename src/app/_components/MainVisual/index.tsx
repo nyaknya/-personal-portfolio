@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import IconTooltip from "../IconTooltip";
 import { TextFade } from "../TextFade";
 import { TextPullUp } from "../TextPullUp";
 import style from "./MainVisual.module.css";
@@ -19,10 +21,46 @@ export default function MainVisual() {
         </div>
         <div>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <IconTooltip>
+                <Image
+                  src="/images/github.png"
+                  alt="깃허브 바로가기"
+                  width={46}
+                  height={46}
+                />
+              </IconTooltip>
+            </li>
+            <li>
+              <IconTooltip>
+                <Image
+                  src="/images/profile.png"
+                  alt="이력서 띄우기"
+                  width={46}
+                  height={46}
+                />
+              </IconTooltip>
+            </li>
+            <li>
+              <IconTooltip>
+                <Image
+                  src="/images/email.png"
+                  alt="이메일 바로가기"
+                  width={46}
+                  height={46}
+                />
+              </IconTooltip>
+            </li>
+            <li>
+              <IconTooltip>
+                <Image
+                  src="/images/velog.png"
+                  alt="벨로그 바로라기"
+                  width={46}
+                  height={46}
+                />
+              </IconTooltip>
+            </li>
           </ul>
         </div>
       </div>

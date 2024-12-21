@@ -1,6 +1,8 @@
 :root {
   --color-white: #ffffff;
   --color-black: #191919;
+  --color-dark100: #202020;
+  --color-dark200: #484848;
 }
 
 html,

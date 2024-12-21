@@ -22,3 +22,15 @@
   font-size: 3.2rem;
   font-weight: 500;
 }
+
+.visual-box ul {
+  width: 22.2%;
+  margin-top: 60px;
+  padding: 20px 0;
+  background: var(--color-dark100);
+  border: 1px solid var(--color-dark200);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  border-radius: 30px;
+}
