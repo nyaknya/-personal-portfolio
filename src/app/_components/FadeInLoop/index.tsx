@@ -43,6 +43,13 @@ export default function FadeInLoop() {
           height={181}
           className={style["slider-img"]}
         />
+        <Image
+          src="/images/main_ts.png"
+          alt="타입스크립트 로고"
+          width={335}
+          height={335}
+          className={style["slider-img"]}
+        />
       </Slider>
     </div>
   );
