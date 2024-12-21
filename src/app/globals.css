@@ -5,8 +5,15 @@
   --color-dark200: #484848;
 }
 
-html,
-body {
+.slick-track {
+  display: flex;
+}
+
+.main-slide .slick-slide > div {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 * {

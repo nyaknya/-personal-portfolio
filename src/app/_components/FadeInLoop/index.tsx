@@ -1,35 +1,49 @@
 "use client";
 
+import React, { useEffect, useRef } from "react";
+import Slider from "react-slick";
 import Image from "next/image";
-import styles from "./FadeInLoop.module.css";
+import style from "./FadeInLoop.module.css";
 
-interface FadeInLoopProps {
-  images: string[];
-}
+export default function FadeInLoop() {
+  const sliderRef = useRef<Slider | null>(null);
 
-export default function FadeInLoop({ images }: FadeInLoopProps) {
-  const duration = images.length * 2;
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 2500,
+    autoplay: true,
+    autoplaySpeed: 800,
+    fade: true,
+    arrows: false,
+  };
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      setTimeout(() => {
+        sliderRef.current?.slickGoTo(0);
+      }, 100);
+    }
+  }, []);
 
   return (
-    <div className={styles.container}>
-      {images.map((src, index) => (
-        <div
-          key={index}
-          className={styles.imgbox}
-          style={{
-            animationDelay: `${index * (duration / images.length)}s`,
-            animationDuration: `${duration}s`,
-          }}
-        >
-          <Image
-            src={src}
-            alt={`Slide ${index + 1}`}
-            layout="fill"
-            objectFit="cover"
-            priority={index === 0}
-          />
-        </div>
-      ))}
+    <div className={(style["slide-container"], "main-slide")}>
+      <Slider ref={sliderRef} {...settings} className={style.imgbox}>
+        <Image
+          src="/images/main_react.png"
+          alt="리액트 로고"
+          width={427}
+          height={380}
+          className={style["slider-img"]}
+        />
+        <Image
+          src="/images/main_next.png"
+          alt="넥스트 로고"
+          width={900}
+          height={181}
+          className={style["slider-img"]}
+        />
+      </Slider>
     </div>
   );
 }
