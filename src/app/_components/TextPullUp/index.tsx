@@ -13,7 +13,7 @@ export function TextPullUp({ children }: { children: React.ReactNode }) {
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.05,
+        delay: i * 0.03,
       },
     }),
   };

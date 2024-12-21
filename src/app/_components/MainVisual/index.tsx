@@ -6,8 +6,11 @@ import { TextFade } from "../TextFade";
 import { TextPullUp } from "../TextPullUp";
 import style from "./MainVisual.module.css";
 import Link from "next/link";
+import FadeInLoop from "../FadeInLoop";
 
 export default function MainVisual() {
+  const images = ["/images/main_react.png", "/images/main_next.png"];
+
   return (
     <section className={style["visual-box"]}>
       <div className="container">
@@ -20,7 +23,7 @@ export default function MainVisual() {
             안녕하세요, 프론트엔드 개발자로 준비 중인 심은주입니다.
           </TextFade>
         </div>
-        <div>
+        <TextFade direction="down">
           <ul>
             <li>
               <IconTooltip tooltip="GitHub">
@@ -69,7 +72,10 @@ export default function MainVisual() {
               </IconTooltip>
             </li>
           </ul>
-        </div>
+        </TextFade>
+      </div>
+      <div className={style["fade-anibox"]}>
+        <FadeInLoop images={images} />
       </div>
     </section>
   );
