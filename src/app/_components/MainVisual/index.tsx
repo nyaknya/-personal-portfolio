@@ -5,6 +5,7 @@ import IconTooltip from "../IconTooltip";
 import { TextFade } from "../TextFade";
 import { TextPullUp } from "../TextPullUp";
 import style from "./MainVisual.module.css";
+import Link from "next/link";
 
 export default function MainVisual() {
   return (
@@ -22,17 +23,19 @@ export default function MainVisual() {
         <div>
           <ul>
             <li>
-              <IconTooltip>
-                <Image
-                  src="/images/github.png"
-                  alt="깃허브 바로가기"
-                  width={46}
-                  height={46}
-                />
+              <IconTooltip tooltip="GitHub">
+                <Link href="https://github.com/nyaknya" target="_blank">
+                  <Image
+                    src="/images/github.png"
+                    alt="깃허브 바로가기"
+                    width={46}
+                    height={46}
+                  />
+                </Link>
               </IconTooltip>
             </li>
             <li>
-              <IconTooltip>
+              <IconTooltip tooltip="이력서 PDF">
                 <Image
                   src="/images/profile.png"
                   alt="이력서 띄우기"
@@ -42,23 +45,27 @@ export default function MainVisual() {
               </IconTooltip>
             </li>
             <li>
-              <IconTooltip>
-                <Image
-                  src="/images/email.png"
-                  alt="이메일 바로가기"
-                  width={46}
-                  height={46}
-                />
+              <IconTooltip tooltip="sim784442@gmail.com">
+                <Link href="mailto:sim784442@gmail.com">
+                  <Image
+                    src="/images/email.png"
+                    alt="이메일"
+                    width={46}
+                    height={46}
+                  />
+                </Link>
               </IconTooltip>
             </li>
             <li>
-              <IconTooltip>
-                <Image
-                  src="/images/velog.png"
-                  alt="벨로그 바로라기"
-                  width={46}
-                  height={46}
-                />
+              <IconTooltip tooltip="벨로그 바로가기">
+                <Link href="https://velog.io/@nyaknya/posts" target="_blank">
+                  <Image
+                    src="/images/velog.png"
+                    alt="벨로그 바로가기"
+                    width={46}
+                    height={46}
+                  />
+                </Link>
               </IconTooltip>
             </li>
           </ul>

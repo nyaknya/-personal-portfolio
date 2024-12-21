@@ -1,0 +1,24 @@
+.tooltip-box {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  color: var(--color-white);
+  left: 50%;
+  top: 85px;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 50px;
+  background: var(--color-dark200);
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: 0.3s all;
+  opacity: 0;
+  width: max-content;
+}
+
+.tooltip-box:hover .tooltip {
+  opacity: 1;
+}
