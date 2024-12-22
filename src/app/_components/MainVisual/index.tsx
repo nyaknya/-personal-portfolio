@@ -7,6 +7,7 @@ import { TextPullUp } from "../TextPullUp";
 import style from "./MainVisual.module.css";
 import Link from "next/link";
 import FadeInLoop from "../FadeInLoop";
+import ScrollDown from "../ScrollDown";
 
 export default function MainVisual() {
   return (
@@ -71,6 +72,7 @@ export default function MainVisual() {
             </li>
           </ul>
         </TextFade>
+        <ScrollDown />
       </div>
       <div className={style["fade-anibox"]}>
         <FadeInLoop />
