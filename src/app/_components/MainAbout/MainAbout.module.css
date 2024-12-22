@@ -1,0 +1,20 @@
+.main-about {
+  padding: 80px 0;
+}
+
+.introduce-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-box {
+  border-radius: 30px;
+  border: 1px solid var(--color-dark200);
+  overflow: hidden;
+}
+
+.main-about h2 {
+  font-size: 4.8rem;
+  color: var(--color-white);
+  margin-bottom: 40px;
+}
