@@ -13,6 +13,10 @@
   color: var(--color-white);
 }
 
+.visual-box h2 > div {
+  display: inline-flex;
+}
+
 .visual-box h2 span {
   display: block;
 }

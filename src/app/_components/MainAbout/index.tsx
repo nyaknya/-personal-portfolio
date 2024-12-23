@@ -19,6 +19,12 @@ export default function MainAbout() {
         </div>
         <IntroduceTab />
       </div>
+      <div className={style.history}>
+        <h3>이력</h3>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </section>
   );
 }

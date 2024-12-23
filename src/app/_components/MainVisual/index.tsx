@@ -8,24 +8,29 @@ import style from "./MainVisual.module.css";
 import Link from "next/link";
 import FadeInLoop from "../FadeInLoop";
 import ScrollDown from "../ScrollDown";
+import { withHoverCursor } from "@/app/_context/withHoverCursor";
+
+const HoverableTextPullUp = withHoverCursor(TextPullUp);
+const HoverableTextFade = withHoverCursor(TextFade);
+const HoverableIconTooltip = withHoverCursor(IconTooltip);
 
 export default function MainVisual() {
   return (
     <section className={style["visual-box"]}>
       <div className="container">
         <h2>
-          <TextPullUp>HELLO!</TextPullUp>
-          <TextPullUp>I’m Frontend Developer</TextPullUp>
+          <HoverableTextPullUp>HELLO!</HoverableTextPullUp>
+          <HoverableTextPullUp>I’m Frontend Developer</HoverableTextPullUp>
         </h2>
         <div className={style.description}>
-          <TextFade direction="down">
+          <HoverableTextFade direction="down">
             안녕하세요, 프론트엔드 개발자로 준비 중인 심은주입니다.
-          </TextFade>
+          </HoverableTextFade>
         </div>
-        <TextFade direction="down">
+        <HoverableTextFade direction="down">
           <ul>
             <li>
-              <IconTooltip tooltip="GitHub">
+              <HoverableIconTooltip tooltip="GitHub">
                 <Link href="https://github.com/nyaknya" target="_blank">
                   <Image
                     src="/images/github.png"
@@ -34,20 +39,20 @@ export default function MainVisual() {
                     height={46}
                   />
                 </Link>
-              </IconTooltip>
+              </HoverableIconTooltip>
             </li>
             <li>
-              <IconTooltip tooltip="이력서 PDF">
+              <HoverableIconTooltip tooltip="이력서 PDF">
                 <Image
                   src="/images/profile.png"
                   alt="이력서 띄우기"
                   width={46}
                   height={46}
                 />
-              </IconTooltip>
+              </HoverableIconTooltip>
             </li>
             <li>
-              <IconTooltip tooltip="sim784442@gmail.com">
+              <HoverableIconTooltip tooltip="sim784442@gmail.com">
                 <Link href="mailto:sim784442@gmail.com">
                   <Image
                     src="/images/email.png"
@@ -56,10 +61,10 @@ export default function MainVisual() {
                     height={46}
                   />
                 </Link>
-              </IconTooltip>
+              </HoverableIconTooltip>
             </li>
             <li>
-              <IconTooltip tooltip="벨로그 바로가기">
+              <HoverableIconTooltip tooltip="벨로그 바로가기">
                 <Link href="https://velog.io/@nyaknya/posts" target="_blank">
                   <Image
                     src="/images/velog.png"
@@ -68,10 +73,10 @@ export default function MainVisual() {
                     height={46}
                   />
                 </Link>
-              </IconTooltip>
+              </HoverableIconTooltip>
             </li>
           </ul>
-        </TextFade>
+        </HoverableTextFade>
         <ScrollDown />
       </div>
       <div className={style["fade-anibox"]}>
