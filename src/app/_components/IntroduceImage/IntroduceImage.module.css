@@ -1,0 +1,5 @@
+.image-box {
+  border-radius: 30px;
+  border: 1px solid var(--color-dark200);
+  overflow: hidden;
+}

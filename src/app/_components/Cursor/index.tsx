@@ -23,7 +23,7 @@ export default function Cursor() {
   }, [x, y]);
 
   useEffect(() => {
-    scale.set(isHovered ? 0.5 : 1);
+    scale.set(isHovered ? 0.3 : 1);
   }, [isHovered, scale]);
 
   return (

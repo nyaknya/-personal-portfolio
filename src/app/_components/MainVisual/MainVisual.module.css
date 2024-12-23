@@ -28,6 +28,10 @@
   font-weight: 500;
 }
 
+.visual-box .description > div {
+  display: inline-block;
+}
+
 .visual-box ul {
   width: 22.2%;
   margin-top: 60px;
