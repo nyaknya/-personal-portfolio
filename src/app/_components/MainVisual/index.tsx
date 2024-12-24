@@ -20,6 +20,7 @@ export default function MainVisual() {
       <div className="container">
         <h2>
           <HoverableTextPullUp>HELLO!</HoverableTextPullUp>
+          <br />
           <HoverableTextPullUp>I’m Frontend Developer</HoverableTextPullUp>
         </h2>
         <div className={style.description}>
