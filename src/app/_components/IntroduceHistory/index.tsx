@@ -3,13 +3,37 @@
 import Link from "next/link";
 import style from "./IntroduceHistory.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+};
 
 export default function IntroduceHistory() {
   return (
-    <div className={style.history}>
+    <motion.div
+      className={style.history}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <h3>이력</h3>
-      <div className={style["history-box-wrap"]}>
-        <div className={style["history-box"]}>
+      <motion.div
+        className={style["history-box-wrap"]}
+        variants={containerVariants}
+      >
+        <motion.div className={style["history-box"]} variants={itemVariants}>
           <ul>
             <li>
               <strong>2020. 02</strong>
@@ -30,8 +54,8 @@ export default function IntroduceHistory() {
               </p>
             </li>
           </ul>
-        </div>
-        <div className={style["history-box"]}>
+        </motion.div>
+        <motion.div className={style["history-box"]} variants={itemVariants}>
           <ul>
             <li>
               <strong>
@@ -67,8 +91,8 @@ export default function IntroduceHistory() {
               </p>
             </li>
           </ul>
-        </div>
-        <div className={style["history-box"]}>
+        </motion.div>
+        <motion.div className={style["history-box"]} variants={itemVariants}>
           <ul>
             <li>
               <strong>
@@ -82,8 +106,8 @@ export default function IntroduceHistory() {
               </p>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

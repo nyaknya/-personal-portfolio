@@ -8,6 +8,7 @@ import IntroduceHistory from "../IntroduceHistory";
 
 const HoverableImageBox = withHoverCursor(IntroduceImage);
 const HoverableTab = withHoverCursor(IntroduceTab);
+const HoverbleHistory = withHoverCursor(IntroduceHistory);
 
 export default function MainAbout() {
   return (
@@ -17,7 +18,7 @@ export default function MainAbout() {
         <HoverableImageBox />
         <HoverableTab />
       </div>
-      <IntroduceHistory />
+      <HoverbleHistory />
     </section>
   );
 }
